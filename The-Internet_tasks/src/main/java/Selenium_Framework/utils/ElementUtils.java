@@ -47,7 +47,7 @@ public class ElementUtils {
      * @param locator The {@link By} locator of the element to click.
      */
     public static void click(By locator) {
-        getElement(locator).click();
+        WaitUtils.waitForClickability(locator, 5).click();
     }
 
     /**
@@ -58,9 +58,8 @@ public class ElementUtils {
      * @param text The new text to enter into the field.
      */
     public static void clearAndSendKeys(By locator, String text) {
-        WebElement element = getElement(locator);
-        element.clear();
-        element.sendKeys(text);
+        WaitUtils.waitForVisibility(locator, 5).clear();
+        getElement(locator).sendKeys(text);
     }
 
     /**
@@ -70,6 +69,7 @@ public class ElementUtils {
      * @return The text content of the element as a {@link String}.
      */
     public static String getText(By locator) {
+        WaitUtils.waitForVisibility(locator, 5);
         return getElement(locator).getText();
     }
 
@@ -80,7 +80,7 @@ public class ElementUtils {
      * @param visibleText The visible text of the option to be selected.
      */
     public static void selectDropdownByVisibleText(By locator, String visibleText) {
-        new Select(getElement(locator)).selectByVisibleText(visibleText);
+        new Select(WaitUtils.waitForVisibility(locator, 5)).selectByVisibleText(visibleText);
     }
 
     /**
@@ -90,7 +90,7 @@ public class ElementUtils {
      * @param value The value attribute of the option to be selected.
      */
     public static void selectDropdownByValue(By locator, String value) {
-        new Select(getElement(locator)).selectByValue(value);
+        new Select(WaitUtils.waitForVisibility(locator, 5)).selectByValue(value);
     }
 
     /**
@@ -100,7 +100,7 @@ public class ElementUtils {
      * @param index The zero-based index of the option to be selected.
      */
     public static void selectDropdownByIndex(By locator, int index) {
-        new Select(getElement(locator)).selectByIndex(index);
+        new Select(WaitUtils.waitForVisibility(locator, 5)).selectByIndex(index);
     }
 
     /**

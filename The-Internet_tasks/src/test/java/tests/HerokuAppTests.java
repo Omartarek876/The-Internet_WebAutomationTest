@@ -43,10 +43,19 @@ public class HerokuAppTests {
     By TC13_ActionButtonLocator = By.xpath("//*[@id=\"input-example\"]/button");
     By TC13_displayedMSG = By.id("message");
     By TC14_dynamicLodingStart1 = By.xpath("//*[@id=\"start\"]/button"); 
-    By TC14_dynamicLodingStart2 = By.xpath("//*[@id=\"start\"]/button");     
+    By TC15_dynamicLodingStart2 = By.xpath("//*[@id=\"start\"]/button");     
     By TC14_dynamicLodingmsg1 = By.id("finish");
-    By TC14_dynamicLodingmsg2 = By.id("finish");  
+    By TC15_dynamicLodingmsg2 = By.id("finish");  
+    By TC16_AdLocator = By.xpath("//*[@id='modal']/div[2]/div[2]/p");
+    By TC16_Adclose = By.xpath("//*[@id='modal']/div[2]/div[3]/p");
+    By TC16_Adtitle = By.xpath("//*[@id='content']/div[1]/h3");
+    By TC16_Adpagetitle = By.xpath("//*[@id='modal']/div[2]/div[1]");
+    By TC16_AdRestart = By.id("restart-ad");
+    
+    
 
+    
+    
     @BeforeClass
     public void setUpClass() {
         System.out.println("The test class is initialized");
@@ -273,11 +282,32 @@ public class HerokuAppTests {
     {
         BrowserUtils.navigateToURL("https://the-internet.herokuapp.com/dynamic_loading/2");
 
-        ElementUtils.click(TC14_dynamicLodingStart2);
-        String msg = WaitUtils.waitForVisibility(TC14_dynamicLodingmsg2, 5).getText();
+        ElementUtils.click(TC15_dynamicLodingStart2);
+        String msg = WaitUtils.waitForVisibility(TC15_dynamicLodingmsg2, 5).getText();
         System.out.println("MSG is " + msg);
         assertTrue(msg.contains("Hello World!") , "Expected 'Hello World!' but got" + msg);        
     }
+    
+    @Test
+    public void TC16_enterAD ()
+    {
+        BrowserUtils.navigateToURL("https://the-internet.herokuapp.com/entry_ad");
+        System.out.println("the content of the AD is : " + ElementUtils.getText(TC16_AdLocator));
+        ElementUtils.click(TC16_Adclose);    
+        assertTrue(ElementUtils.getText(TC16_Adtitle).contains("Ad") , "there is an error in the page");
+    }
+    
+    @Test
+    public void TC16_enterAD_reload ()
+    {
+        BrowserUtils.navigateToURL("https://the-internet.herokuapp.com/entry_ad");
+        ElementUtils.click(TC16_Adclose);  
+        ElementUtils.click(TC16_AdRestart);
+        System.out.println(ElementUtils.getText(TC16_Adpagetitle));
+        assertTrue(ElementUtils.getText(TC16_Adpagetitle).contains("MODAL WINDOW") , "there is an error in the page reload");
+    }
+    
+    
    
 /*
     mvn clean test

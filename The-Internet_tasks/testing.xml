@@ -3,7 +3,13 @@
 <suite name="HerokuAppSuite" parallel="false">
     <test name="HerokuAppTests">
         <classes>
-            <class name="tests.HerokuAppTests" />
+            <class name="tests.HerokuAppTests">
+                <methods>
+                    <!-- Include specific test methods by their names -->
+                    <include name="TC16_enterAD"/>
+                    <include name="TC16_enterAD_reload"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
