@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="14" passed="14" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-09-03T21:35:52 EEST" name="Surefire suite" finished-at="2025-09-03T21:37:33 EEST" duration-ms="101519">
+    <groups>
+    </groups>
+    <test started-at="2025-09-03T21:35:52 EEST" name="Surefire test" finished-at="2025-09-03T21:37:33 EEST" duration-ms="101519">
+      <class name="tests.HerokuAppTests">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:35:52 EEST" name="setUpClass" finished-at="2025-09-03T21:35:52 EEST" duration-ms="18" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:35:52 EEST" name="setUpMethod" finished-at="2025-09-03T21:36:00 EEST" duration-ms="8242" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="TC10_DropDown()[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:36:00 EEST" name="TC10_DropDown" finished-at="2025-09-03T21:36:03 EEST" duration-ms="3442" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC10_DropDown -->
+        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:36:04 EEST" name="tearDownMethod" finished-at="2025-09-03T21:36:04 EEST" duration-ms="181" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC10_DropDown status=SUCCESS method=HerokuAppTests.TC10_DropDown()[pri:0, instance:tests.HerokuAppTests@d29f28] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:36:04 EEST" name="setUpMethod" finished-at="2025-09-03T21:36:04 EEST" duration-ms="803" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="TC11_DynamicContent()[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:36:04 EEST" name="TC11_DynamicContent" finished-at="2025-09-03T21:36:08 EEST" duration-ms="3483" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC11_DynamicContent -->
+        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:36:08 EEST" name="tearDownMethod" finished-at="2025-09-03T21:36:08 EEST" duration-ms="110" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC11_DynamicContent status=SUCCESS method=HerokuAppTests.TC11_DynamicContent()[pri:0, instance:tests.HerokuAppTests@d29f28] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:36:08 EEST" name="setUpMethod" finished-at="2025-09-03T21:36:09 EEST" duration-ms="818" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="TC12_dynamicAddAndRemove()[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:36:09 EEST" name="TC12_dynamicAddAndRemove" finished-at="2025-09-03T21:36:18 EEST" duration-ms="9257" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC12_dynamicAddAndRemove -->
+        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:36:18 EEST" name="tearDownMethod" finished-at="2025-09-03T21:36:18 EEST" duration-ms="139" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC12_dynamicAddAndRemove status=SUCCESS method=HerokuAppTests.TC12_dynamicAddAndRemove()[pri:0, instance:tests.HerokuAppTests@d29f28] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:36:18 EEST" name="setUpMethod" finished-at="2025-09-03T21:36:19 EEST" duration-ms="722" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="TC13_DynamicEnableAndDisable()[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:36:19 EEST" name="TC13_DynamicEnableAndDisable" finished-at="2025-09-03T21:36:29 EEST" duration-ms="9444" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC13_DynamicEnableAndDisable -->
+        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:36:29 EEST" name="tearDownMethod" finished-at="2025-09-03T21:36:29 EEST" duration-ms="131" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC13_DynamicEnableAndDisable status=SUCCESS method=HerokuAppTests.TC13_DynamicEnableAndDisable()[pri:0, instance:tests.HerokuAppTests@d29f28] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:36:29 EEST" name="setUpMethod" finished-at="2025-09-03T21:36:29 EEST" duration-ms="749" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="TC14_DynamicLoading1()[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:36:29 EEST" name="TC14_DynamicLoading1" finished-at="2025-09-03T21:36:38 EEST" duration-ms="8992" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC14_DynamicLoading1 -->
+        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:36:38 EEST" name="tearDownMethod" finished-at="2025-09-03T21:36:39 EEST" duration-ms="134" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC14_DynamicLoading1 status=SUCCESS method=HerokuAppTests.TC14_DynamicLoading1()[pri:0, instance:tests.HerokuAppTests@d29f28] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:36:39 EEST" name="setUpMethod" finished-at="2025-09-03T21:36:39 EEST" duration-ms="792" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="TC15_DynamicLoading2()[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:36:39 EEST" name="TC15_DynamicLoading2" finished-at="2025-09-03T21:36:48 EEST" duration-ms="8401" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC15_DynamicLoading2 -->
+        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:36:48 EEST" name="tearDownMethod" finished-at="2025-09-03T21:36:48 EEST" duration-ms="117" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC15_DynamicLoading2 status=SUCCESS method=HerokuAppTests.TC15_DynamicLoading2()[pri:0, instance:tests.HerokuAppTests@d29f28] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:36:48 EEST" name="setUpMethod" finished-at="2025-09-03T21:36:49 EEST" duration-ms="766" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="TC1_AB_Test_Control()[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:36:49 EEST" name="TC1_AB_Test_Control" finished-at="2025-09-03T21:36:52 EEST" duration-ms="2978" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC1_AB_Test_Control -->
+        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:36:52 EEST" name="tearDownMethod" finished-at="2025-09-03T21:36:52 EEST" duration-ms="121" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC1_AB_Test_Control status=SUCCESS method=HerokuAppTests.TC1_AB_Test_Control()[pri:0, instance:tests.HerokuAppTests@d29f28] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:36:52 EEST" name="setUpMethod" finished-at="2025-09-03T21:36:53 EEST" duration-ms="754" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="TC2_Add_Remove_Elements()[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:36:53 EEST" name="TC2_Add_Remove_Elements" finished-at="2025-09-03T21:36:57 EEST" duration-ms="4055" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC2_Add_Remove_Elements -->
+        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:36:57 EEST" name="tearDownMethod" finished-at="2025-09-03T21:36:57 EEST" duration-ms="115" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC2_Add_Remove_Elements status=SUCCESS method=HerokuAppTests.TC2_Add_Remove_Elements()[pri:0, instance:tests.HerokuAppTests@d29f28] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:36:57 EEST" name="setUpMethod" finished-at="2025-09-03T21:36:57 EEST" duration-ms="753" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="TC3_BasicAuth()[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:36:57 EEST" name="TC3_BasicAuth" finished-at="2025-09-03T21:37:02 EEST" duration-ms="4108" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC3_BasicAuth -->
+        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:37:02 EEST" name="tearDownMethod" finished-at="2025-09-03T21:37:02 EEST" duration-ms="106" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC3_BasicAuth status=SUCCESS method=HerokuAppTests.TC3_BasicAuth()[pri:0, instance:tests.HerokuAppTests@d29f28] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:37:02 EEST" name="setUpMethod" finished-at="2025-09-03T21:37:02 EEST" duration-ms="717" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="TC5_ChallengingDOM()[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:37:02 EEST" name="TC5_ChallengingDOM" finished-at="2025-09-03T21:37:14 EEST" duration-ms="11042" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC5_ChallengingDOM -->
+        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:37:14 EEST" name="tearDownMethod" finished-at="2025-09-03T21:37:14 EEST" duration-ms="114" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC5_ChallengingDOM status=SUCCESS method=HerokuAppTests.TC5_ChallengingDOM()[pri:0, instance:tests.HerokuAppTests@d29f28] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:37:14 EEST" name="setUpMethod" finished-at="2025-09-03T21:37:14 EEST" duration-ms="742" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="TC6_checkedBoxes()[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:37:14 EEST" name="TC6_checkedBoxes" finished-at="2025-09-03T21:37:18 EEST" duration-ms="3718" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC6_checkedBoxes -->
+        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:37:18 EEST" name="tearDownMethod" finished-at="2025-09-03T21:37:18 EEST" duration-ms="118" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC6_checkedBoxes status=SUCCESS method=HerokuAppTests.TC6_checkedBoxes()[pri:0, instance:tests.HerokuAppTests@d29f28] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:37:18 EEST" name="setUpMethod" finished-at="2025-09-03T21:37:19 EEST" duration-ms="734" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="TC7_contextMneu()[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:37:19 EEST" name="TC7_contextMneu" finished-at="2025-09-03T21:37:23 EEST" duration-ms="3867" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC7_contextMneu -->
+        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:37:23 EEST" name="tearDownMethod" finished-at="2025-09-03T21:37:23 EEST" duration-ms="121" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC7_contextMneu status=SUCCESS method=HerokuAppTests.TC7_contextMneu()[pri:0, instance:tests.HerokuAppTests@d29f28] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:37:23 EEST" name="setUpMethod" finished-at="2025-09-03T21:37:24 EEST" duration-ms="810" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="TC8_DisappearingElements()[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:37:24 EEST" name="TC8_DisappearingElements" finished-at="2025-09-03T21:37:29 EEST" duration-ms="4948" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC8_DisappearingElements -->
+        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:37:29 EEST" name="tearDownMethod" finished-at="2025-09-03T21:37:29 EEST" duration-ms="132" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC8_DisappearingElements status=SUCCESS method=HerokuAppTests.TC8_DisappearingElements()[pri:0, instance:tests.HerokuAppTests@d29f28] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:37:29 EEST" name="setUpMethod" finished-at="2025-09-03T21:37:30 EEST" duration-ms="717" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="TC9_DragAndDrop()[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:37:30 EEST" name="TC9_DragAndDrop" finished-at="2025-09-03T21:37:33 EEST" duration-ms="3255" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC9_DragAndDrop -->
+        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:37:33 EEST" name="tearDownMethod" finished-at="2025-09-03T21:37:33 EEST" duration-ms="105" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC9_DragAndDrop status=SUCCESS method=HerokuAppTests.TC9_DragAndDrop()[pri:0, instance:tests.HerokuAppTests@d29f28] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:tests.HerokuAppTests@d29f28]" started-at="2025-09-03T21:37:33 EEST" name="tearDownClass" finished-at="2025-09-03T21:37:33 EEST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- tests.HerokuAppTests -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

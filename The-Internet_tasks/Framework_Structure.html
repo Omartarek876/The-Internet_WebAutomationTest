@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selenium Framework Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a202c;
+            color: #e2e8f0;
+        }
+        .card {
+            background-color: #2d3748;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid #4a5568;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .section-title {
+            position: relative;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background-color: #63b3ed;
+            border-radius: 9999px;
+        }
+        .link-style {
+            color: #90cdf4;
+            transition: color 0.2s ease-in-out;
+        }
+        .link-style:hover {
+            color: #63b3ed;
+        }
+    </style>
+</head>
+<body class="p-8 md:p-12 lg:p-16">
+    <header class="text-center mb-12">
+        <h1 class="text-4xl sm:text-5xl font-bold text-white mb-2">Selenium Automation Framework</h1>
+        <p class="text-lg text-gray-400">Comprehensive documentation for the core utility classes.</p>
+    </header>
+
+    <main class="max-w-7xl mx-auto space-y-12">
+
+        <!-- Core Component Section -->
+        <section class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700">
+            <h2 class="text-3xl font-bold section-title">Core Component</h2>
+            <div class="space-y-6">
+                <!-- Class: BaseDriver -->
+                <div class="card p-6">
+                    <h3 class="text-2xl font-semibold mb-2">BaseDriver.java</h3>
+                    <p class="text-sm text-gray-400 mb-4">
+                        This class is the foundation of the framework, managing the WebDriver instance and providing methods to initialize, retrieve, and quit the driver.
+                    </p>
+                    <div class="space-y-4">
+                        <!-- Method: initializeDriver -->
+                        <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">initializeDriver(String browser)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Initializes a new WebDriver instance (Chrome or Firefox).</p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium text-white">Parameters:</p>
+                                <ul class="list-disc list-inside ml-4 text-gray-300">
+                                    <li><strong>browser (String)</strong>: The browser to use, "chrome" or "firefox".</li>
+                                </ul>
+                            </div>
+                            <div class="mt-2 text-sm">
+                                <p class="font-medium text-white">Return Value:</p>
+                                <p class="text-gray-300">WebDriver</p>
+                            </div>
+                        </div>
+
+                        <!-- Method: getDriver -->
+                        <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">getDriver()</h4>
+                            <p class="text-sm text-gray-400 mb-2">Returns the active WebDriver instance.</p>
+                            <div class="mt-2 text-sm">
+                                <p class="font-medium text-white">Return Value:</p>
+                                <p class="text-gray-300">WebDriver</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Method: quitDriver -->
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2 link-style">quitDriver()</h4>
+                            <p class="text-sm text-gray-400 mb-2">Closes all browser windows and shuts down the WebDriver session.</p>
+                            <div class="mt-2 text-sm">
+                                <p class="font-medium text-white">Return Value:</p>
+                                <p class="text-gray-300">void</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Utility Classes Section -->
+        <section class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700">
+            <h2 class="text-3xl font-bold section-title">Utility Classes</h2>
+            <div class="space-y-6">
+                <!-- Class: ElementUtils -->
+                <div class="card p-6">
+                    <h3 class="text-2xl font-semibold mb-2">ElementUtils.java</h3>
+                    <p class="text-sm text-gray-400 mb-4">
+                        Provides helper methods for common element interactions like clicking, typing, and selecting dropdown options, always using a `By` locator.
+                    </p>
+                    <div class="space-y-4">
+                        <!-- Methods -->
+                        <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">getElement(By locator)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Finds and returns a single visible `WebElement`.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">locator (By)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">WebElement</span></p>
+                        </div>
+                        <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">getElements(By locator)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Finds and returns a list of `WebElement` objects.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">locator (By)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">List&lt;WebElement&gt;</span></p>
+                        </div>
+                        <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">click(By locator)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Performs a click action on a located element.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">locator (By)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                         <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">clearAndSendKeys(By locator, String text)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Clears existing text and sends new text to an input field.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">locator (By), text (String)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                        <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">getText(By locator)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Gets the text content of a located element.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">locator (By)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">String</span></p>
+                        </div>
+                        <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">selectDropdownByText(By locator, String visibleText)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Selects an option from a dropdown by its visible text.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">locator (By), visibleText (String)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                        <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">selectDropdownByValue(By locator, String value)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Selects an option from a dropdown by its value attribute.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">locator (By), value (String)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                        <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">selectDropdownByIndex(By locator, int index)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Selects an option from a dropdown by its index.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">locator (By), index (int)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                        <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">checkCheckbox(By locator)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Checks a checkbox if it is not already selected.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">locator (By)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                         <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">uncheckCheckbox(By locator)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Unchecks a checkbox if it is currently selected.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">locator (By)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                         <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">selectRadioButton(By locator)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Selects a radio button if it is not already selected.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">locator (By)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Class: WaitUtils -->
+                <div class="card p-6">
+                    <h3 class="text-2xl font-semibold mb-2">WaitUtils.java</h3>
+                    <p class="text-sm text-gray-400 mb-4">
+                        Manages synchronization with explicit, implicit, and fluent waits to handle dynamic web pages.
+                    </p>
+                    <div class="space-y-4">
+                        <!-- Methods -->
+                        <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">waitForVisibility(By locator, int timeoutSeconds)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Waits for an element to be visible on the page.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">locator (By), timeoutSeconds (int)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">WebElement</span></p>
+                        </div>
+                        <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">waitForClickability(By locator, int timeoutSeconds)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Waits for an element to be clickable.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">locator (By), timeoutSeconds (int)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">WebElement</span></p>
+                        </div>
+                         <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">fluentWait(By locator, int timeoutSeconds, int pollingSeconds)</h4>
+                            <p class="text-sm text-gray-400 mb-2">A flexible wait that polls for an element and can ignore exceptions.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">locator (By), timeoutSeconds (int), pollingSeconds (int)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">WebElement</span></p>
+                        </div>
+                         <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">waitForPresence(By locator, int timeoutSeconds)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Waits for an element to be present in the DOM.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">locator (By), timeoutSeconds (int)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">WebElement</span></p>
+                        </div>
+                        <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">waitForTextToBePresent(By locator, String text, int timeoutSeconds)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Waits for a specific text string to appear in an element.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">locator (By), text (String), timeoutSeconds (int)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">WebElement</span></p>
+                        </div>
+                        <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">waitForInvisibility(By locator, int timeoutSeconds)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Waits for an element to become invisible or to disappear from the DOM.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">locator (By), timeoutSeconds (int)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">boolean</span></p>
+                        </div>
+                        <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">setImplicitWait(int timeoutSeconds)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Sets a global implicit wait. Use with caution.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">timeoutSeconds (int)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Class: ActionsUtils -->
+                <div class="card p-6">
+                    <h3 class="text-2xl font-semibold mb-2">ActionsUtils.java</h3>
+                    <p class="text-sm text-gray-400 mb-4">
+                        Provides helper methods for advanced user interactions using Selenium's `Actions` class.
+                    </p>
+                    <div class="space-y-4">
+                        <!-- Methods -->
+                        <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">hoverOverElement(By locator)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Simulates a mouse-over action on an element.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">locator (By)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                        <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">dragAndDrop(By sourceLocator, By targetLocator)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Performs a drag-and-drop operation.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">sourceLocator (By), targetLocator (By)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                        <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">doubleClick(By locator)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Executes a double-click on an element.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">locator (By)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                         <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">rightClick(By locator)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Performs a right-click action on an element.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">locator (By)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                         <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">scrollToElement(By locator)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Scrolls the page to bring an element into view.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">locator (By)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                         <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">sendKeyCombination(Keys key1, Keys key2)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Sends a combination of keys.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">key1 (Keys), key2 (Keys)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                         <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">hoverAndClick(By locator)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Performs a combined hover and click action.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">locator (By)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                         <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">clickAndHold(By locator)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Clicks and holds the mouse button down on an element.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">locator (By)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                         <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">releaseMouse()</h4>
+                            <p class="text-sm text-gray-400 mb-2">Releases the mouse button.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">None</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Class: KeyboardUtils -->
+                <div class="card p-6">
+                    <h3 class="text-2xl font-semibold mb-2">KeyboardUtils.java</h3>
+                    <p class="text-sm text-gray-400 mb-4">
+                        Manages various keyboard actions, including sending text, single keys, and key combinations.
+                    </p>
+                    <div class="space-y-4">
+                        <!-- Methods -->
+                        <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">sendKeys(By locator, String text)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Sends a string of text to an input field.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">locator (By), text (String)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                        <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">sendKey(By locator, Keys key)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Sends a single keyboard key to an element.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">locator (By), key (Keys)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                         <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">sendKeyCombination(By locator, Keys key1, Keys key2)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Sends a combination of keys (a chord) to an element.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">locator (By), key1 (Keys), key2 (Keys)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                         <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">sendEnter(By locator)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Sends the ENTER key to a specified element.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">locator (By)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                         <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">sendTab(By locator)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Sends the TAB key to a specified element.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">locator (By)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                         <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">copyAll(By locator)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Performs a Ctrl+A, Ctrl+C to copy all text from an element.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">locator (By)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                         <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">copyText(By locator)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Copies selected text from an element using Ctrl+C.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">locator (By)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                         <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">pasteText(By locator)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Pastes text from the clipboard into an element using Ctrl+V.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">locator (By)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                         <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">basicAuthUsingRobot(String name, String pass)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Uses Java's `Robot` class to handle a basic authentication popup.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">name (String), pass (String)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Class: BrowserUtils -->
+                <div class="card p-6">
+                    <h3 class="text-2xl font-semibold mb-2">BrowserUtils.java</h3>
+                    <p class="text-sm text-gray-400 mb-4">
+                        Contains methods for managing browser-level actions and navigation.
+                    </p>
+                    <div class="space-y-4">
+                        <!-- Methods -->
+                        <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">switchToTab(int index)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Switches to a specific browser tab using its index.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">index (int)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                        <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">navigateToURL(String url)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Navigates to a specified URL.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">url (String)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                         <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">GetCurrentLink()</h4>
+                            <p class="text-sm text-gray-400 mb-2">Gets the URL of the current browser page.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">None</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">String</span></p>
+                        </div>
+                        <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">closeCurrentTabAndSwitchToFirst()</h4>
+                            <p class="text-sm text-gray-400 mb-2">Closes the current tab and switches to the first tab.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">None</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                         <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">refreshPage()</h4>
+                            <p class="text-sm text-gray-400 mb-2">Refreshes the current browser page.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">None</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                        <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">navigateBack()</h4>
+                            <p class="text-sm text-gray-400 mb-2">Navigates back to the previous page in the browser's history.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">None</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                        <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">navigateForward()</h4>
+                            <p class="text-sm text-gray-400 mb-2">Navigates forward to the next page in the browser's history.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">None</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Class: AlertUtils -->
+                <div class="card p-6">
+                    <h3 class="text-2xl font-semibold mb-2">AlertUtils.java</h3>
+                    <p class="text-sm text-gray-400 mb-4">
+                        Provides a simple way to interact with JavaScript alerts, confirms, and prompts.
+                    </p>
+                    <div class="space-y-4">
+                        <!-- Methods -->
+                        <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">acceptAlert()</h4>
+                            <p class="text-sm text-gray-400 mb-2">Accepts the currently displayed alert.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">None</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                        <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">dismissAlert()</h4>
+                            <p class="text-sm text-gray-400 mb-2">Dismisses the currently displayed alert.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">None</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                        <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">getAlertText()</h4>
+                            <p class="text-sm text-gray-400 mb-2">Retrieves the text from the currently displayed alert.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">None</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">String</span></p>
+                        </div>
+                        <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">sendTextToAlert(String text)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Sends text to a prompt alert and then accepts it.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">text (String)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                        <div class="border-b border-gray-600 pb-4">
+                            <h4 class="text-xl font-semibold mb-2 link-style">sendAuthToAlert(String name, String password)</h4>
+                            <p class="text-sm text-gray-400 mb-2">Sends a username and password to a basic authentication alert.</p>
+                            <p class="font-medium text-white text-sm">Parameters: <span class="text-gray-300">name (String), password (String)</span></p>
+                            <p class="font-medium text-white text-sm mt-1">Return Value: <span class="text-gray-300">void</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>
